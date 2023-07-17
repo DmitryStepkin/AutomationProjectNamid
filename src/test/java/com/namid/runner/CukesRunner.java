@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
             plugin = {"pretty",
                     "html:target/reports.html",
                     "rerun:target/rerun.txt",
+                    "json:target/cucumber.json",
                     "me.jvt.cucumber.report.PrettyReports:target/cucumber"
             },
             features = "src/test/resources/features",
