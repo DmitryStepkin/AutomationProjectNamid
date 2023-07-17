@@ -14,14 +14,15 @@ import org.junit.runner.RunWith;
                     "me.jvt.cucumber.report.PrettyReports:target/cucumber"
             },
             features = "src/test/resources/features",
-            glue = "com/namid/step_definitions",
+            glue = "com/namid/step_definition",
             dryRun = false,
-            tags = "",
+            tags = "@wip",
             publish = true // generating a report with public link
-            //, monochrome=true  --> works with pretty plugin
+
     )
 
 public class CukesRunner{
 
 }
+
 
