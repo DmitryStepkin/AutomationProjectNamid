@@ -39,11 +39,11 @@ Feature: US01 As POS and eventCRM manager, I should be able to Login with valid 
       | eventscrmmanager1000@info.com | eventscrmmanager  |
       | eventscrmmanager50@info.com   | eventscrmmanager1 |
 
-    Scenario: AC-3 TC04 Verify that the user gets error message for blank username field.
-     Given  User is on the login page
-      When  User leave blank username field and enter password
-      And   User click on login button
-      Then  User should sees error message in username field
+  Scenario: AC-3 TC04 Verify that the user gets error message for blank username field.
+    Given  User is on the login page
+    When  User leave blank username field and enter password
+    And   User click on login button
+    Then  User should sees error message in username field
 
   Scenario: AC-3 TC05 Verify that the user gets error message for blank password field.
     Given  User is on the login page
