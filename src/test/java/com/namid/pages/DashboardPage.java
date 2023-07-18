@@ -13,4 +13,7 @@ public class DashboardPage {
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement userName;
+
+    @FindBy(xpath = "//a[@href=\"/web#menu_id=445&action=\"]/span")
+    public WebElement sales;
 }
