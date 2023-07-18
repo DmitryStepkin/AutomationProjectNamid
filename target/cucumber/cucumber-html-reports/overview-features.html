@@ -50,7 +50,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                24,
+                60,
                 0,
                 0,
                 0,
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 24) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 60) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,7 +106,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                6,
+                15,
                 0
             ],
             backgroundColor: [
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 6) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 15) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>17 Jul 2023, 19:43</td>
+      <td>18 Jul 2023, 12:09</td>
     </tr>
   </tbody>
 </table>
@@ -325,18 +325,18 @@ $(document).ready(function() {
       <tr>
         <td class="tagname"><a href="report-feature_662303513.html">US01 As POS and eventCRM manager, I should be able to Login with valid credentials.</a></td>
 
-        <td      class="passed"    >24</td>
+        <td      class="passed"    >60</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">24</td>
+        <td class="total">60</td>
 
-        <td  class="passed"    >6</td>
+        <td  class="passed"    >15</td>
         <td >0</td>
-        <td class="total">6</td>
+        <td class="total">15</td>
 
-        <td class="duration" data-value="30284288900">30.284</td>
+        <td class="duration" data-value="65779281600">1:5.779</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -344,18 +344,18 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>24</td>
+      <td>60</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>24</td>
+      <td>60</td>
 
-      <td>6</td>
+      <td>15</td>
       <td>0</td>
-      <td>6</td>
+      <td>15</td>
 
-      <td class="duration">30.284</td>
+      <td class="duration">1:5.779</td>
       <td>1</td>
     </tr>
     <tr>
