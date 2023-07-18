@@ -53,8 +53,32 @@ public class US01_Dmitrii_StepDefs {
         Assert.assertTrue(actualMessage.contains(expectedMessage));
     }
 
-//    String actualErrorMessage = jiraAutomationLogin.emailBox.getAttribute("validationMessage");
-//    String expectedErrorMessage = "Please include an '@' in the email address.";
-//
-//        Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage));
+    @When("User leave blank username field and enter password")
+    public void userLeaveBlankUsernameFieldAndEnterPassword() {
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordPostManager"));
+    }
+
+
+    @Then("User should sees error message in username field")
+    public void userShouldSeesErrorMessageInUsernameField() {
+
+        String actualMessage = loginPage.loginInput.getAttribute("validationMessage");
+        String expectedMessage = "Please fill out this field.";
+        Assert.assertEquals(expectedMessage,actualMessage);
+
+    }
+
+    @When("User leave blank password field and enter username")
+    public void userLeaveBlankPasswordFieldAndEnterUsername() {
+        loginPage.loginInput.sendKeys(ConfigurationReader.getProperty("loginPostManager"));
+    }
+
+    @Then("User should sees error message in password field")
+    public void userShouldSeesErrorMessageInPasswordField() {
+        String actualMessage = loginPage.passwordInput.getAttribute("validationMessage");
+        String expectedMessage = "Please fill out this field.";
+        Assert.assertEquals(expectedMessage,actualMessage);
+
+    }
+
 }
