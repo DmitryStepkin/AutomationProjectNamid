@@ -16,9 +16,16 @@ public class DashboardPage {
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement userName;
 
+    @FindBy(xpath = "//a[@href=\"/web#menu_id=445&action=\"]/span")
+    public WebElement sales;
+
     @FindBy(xpath ="//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']//span[@class='oe_menu_text']")
     public List<WebElement> topNavigationBar;
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement inventoryManagerDisplayName;
+
+    @FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
+    public WebElement repairs;
+
 }
