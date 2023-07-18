@@ -1,4 +1,4 @@
-@B29G30-166
+
 Feature: US01 As POS and eventCRM manager, I should be able to Login with valid credentials.
 
 
@@ -17,7 +17,7 @@ Feature: US01 As POS and eventCRM manager, I should be able to Login with valid 
       | eventscrmmanager10@info.com  | eventscrmmanager | EventsCRMManager10  |
       | eventscrmmanager100@info.com | eventscrmmanager | EventsCRMManager100 |
       | eventscrmmanager50@info.com  | eventscrmmanager | EventsCRMManager50  |
-
+  @B29G30-166
   Scenario: AC-1 TC02 Verify that the user can log in with valid credentials by  hitting the "Enter" key on the keyboard.
     Given User is on the login page
     When  User enter "posmanager5@info.com" and "posmanager" in the appropriate fields
