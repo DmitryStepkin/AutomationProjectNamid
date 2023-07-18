@@ -21,6 +21,9 @@ public class LoginPage {
     @FindBy(xpath = "//button[.='Log in']")
     public WebElement loginBtn;
 
+    @FindBy(xpath = "//p[@class='alert alert-danger']")
+    public WebElement invalidCredentialsMessage;
+
     public void loginAsPostManager(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         loginInput.sendKeys(ConfigurationReader.getProperty("loginPostManager"));
