@@ -10,18 +10,19 @@ import org.junit.runner.RunWith;
             plugin = {"pretty",
                     "html:target/reports.html",
                     "rerun:target/rerun.txt",
-                    "json:target/cucumber.json",
+                   "json:target/cucumber.json",
                     "me.jvt.cucumber.report.PrettyReports:target/cucumber"
             },
             features = "src/test/resources/features",
-            glue = "com/namid/step_definitions",
+            glue = "com/namid/step_definition",
             dryRun = false,
-            tags = "",
+            tags = "@B29G30-166",
             publish = true // generating a report with public link
-            //, monochrome=true  --> works with pretty plugin
+
     )
 
 public class CukesRunner{
 
 }
+
 
