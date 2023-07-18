@@ -33,8 +33,6 @@ public class Hooks {
             scenario.attach(screenshot,"image/png", scenario.getName());
         }
 
-
-
         //System.out.println("--->@After: RUNNING AFTER EACH SCENARIO");
         Driver.closeDriver();
     }
