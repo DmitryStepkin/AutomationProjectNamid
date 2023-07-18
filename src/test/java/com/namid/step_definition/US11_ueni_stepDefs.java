@@ -18,11 +18,13 @@ public class US11_ueni_stepDefs {
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
     SalesPage salesPage = new SalesPage();
-    @Given("user is at sales page")
-    public void user_is_at_sales_page() {
+
+    @Given("POS is at sales page")
+    public void posIsAtSalesPage() {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        loginPage.loginInput.sendKeys(ConfigurationReader.getProperty("loginSalesManager"));
-        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordSalesManager"));
+        loginPage.loginInput.sendKeys(ConfigurationReader.getProperty("loginPostManager"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordPostManager"));
         loginPage.loginBtn.click();
         dashboardPage.sales.click();
     }
@@ -37,5 +39,15 @@ public class US11_ueni_stepDefs {
             Assert.assertTrue(allCheckbox.isSelected());
         }
 
+    }
+
+
+    @Given("Sales manager is at sales page")
+    public void salesManagerIsAtSalesPage() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        loginPage.loginInput.sendKeys(ConfigurationReader.getProperty("loginSalesManager"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordSalesManager"));
+        loginPage.loginBtn.click();
+        dashboardPage.sales.click();
     }
 }
