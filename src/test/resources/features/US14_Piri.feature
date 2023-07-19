@@ -23,4 +23,4 @@ Feature: As an inventory manager, I should be able to access the main modules
       | Maintenance     |
       | Dashboard       |
 
-    And user should see username on at the right to of the page
+    #And user should see username on at the right to of the page

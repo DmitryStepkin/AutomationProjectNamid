@@ -13,6 +13,12 @@ public class DashboardPageEventCRM_Manag {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "//li[@style='display: block;']//span")
+    @FindBy (xpath = "//li[@style='display: block;']")
     public List<WebElement> modulesBtn;
+
+    @FindBy(xpath = "//ol[@class='breadcrumb']//li")
+    public WebElement pageMessage;
+
+
+
 }
