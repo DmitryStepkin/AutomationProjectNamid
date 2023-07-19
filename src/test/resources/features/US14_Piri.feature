@@ -1,4 +1,4 @@
-@B29G30-170
+@B29G30-179
 Feature: As an inventory manager, I should be able to access the main modules
 
   Scenario: AC-1 TC14 Verify the Inventory managers have access to 16 modules
@@ -21,6 +21,6 @@ Feature: As an inventory manager, I should be able to access the main modules
       | Expenses        |
       | Lunch           |
       | Maintenance     |
-      | Dashboard       |
+      | Dashboards       |
 
-    #And user should see username on at the right to of the page
+    And user should see username on at the right to of the page
