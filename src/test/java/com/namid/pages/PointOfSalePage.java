@@ -22,4 +22,15 @@ public class PointOfSalePage {
 
     @FindBy (xpath = "(//input[@type='checkbox'])[3]")
     public WebElement mainCheckbox;
+
+    @FindBy (xpath = "//div[@class='btn-group']")
+    public WebElement actionButton;
+
+    @FindBy (xpath = "//a[@data-index='0']")
+    public WebElement exportButton;
+
+    @FindBy (xpath = "//a[@data-index='1']")
+    public WebElement deleteButton;
+
+
 }

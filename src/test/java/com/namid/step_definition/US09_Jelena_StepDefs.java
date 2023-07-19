@@ -11,8 +11,10 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
+import java.util.Set;
 
 public class US09_Jelena_StepDefs {
 
@@ -62,4 +64,28 @@ public class US09_Jelena_StepDefs {
 
 
     }
+
+    @When(": User clicks on Action button")
+    public void userClicksOnActionButton() {
+
+        pointOfSalePage.actionButton.click();
+    }
+
+
+    @Then(": User sees {string}, {string}, {string} options under Action Button")
+    public void userSeesOptionsUnderActionButton(String expectedDrop1, String expectedDrop2, String expectedDrop3) {
+
+
+        String actualDrop2 = pointOfSalePage.exportButton.getText();
+        String actualDrop3 = pointOfSalePage.deleteButton.getText();
+
+        Assert.assertEquals(actualDrop2,expectedDrop2);
+        Assert.assertEquals(actualDrop3,expectedDrop3);
+
+    }
 }
+
+
+
+
+
