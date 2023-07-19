@@ -1,6 +1,5 @@
 package com.namid.pages;
 
-import com.namid.utilities.ConfigurationReader;
 import com.namid.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

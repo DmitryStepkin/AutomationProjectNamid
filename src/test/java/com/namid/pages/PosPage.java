@@ -26,7 +26,9 @@ public class PosPage {
     public WebElement QuotationDate;
 @FindBy(xpath = "//th[.='Customer']")
     public WebElement Customer;
+
 @FindBy(xpath = "//th[.='Salesperson']")
+
 
 
     public WebElement Salesperson;
@@ -38,5 +40,8 @@ public class PosPage {
 @FindBy(xpath = "//thead//tr")
 
 public  List<WebElement> Columns;
+
+
+
 }
 
