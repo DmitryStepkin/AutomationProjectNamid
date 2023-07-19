@@ -1,5 +1,6 @@
 package com.namid.step_definition;
 
+import com.namid.pages.DashBoardInventoryPage;
 import com.namid.pages.DashboardPage;
 import com.namid.pages.LoginPage;
 import com.namid.utilities.BrowserUtils;
@@ -16,7 +17,7 @@ import java.util.List;
 public class US14_Piri_StepDefinition {
 
     LoginPage loginPage=new LoginPage();
-    DashboardPage dashboardPage = new DashboardPage();
+    DashBoardInventoryPage dashboardPage = new DashBoardInventoryPage();
 
     @Given("User logs in as Inventory manager")
     public void user_logs_in_as_inventory_manager() throws InterruptedException {
