@@ -21,4 +21,28 @@ public class DashboardPage {
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement inventoryManagerDisplayName;
+
+    @FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
+    public WebElement repairs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

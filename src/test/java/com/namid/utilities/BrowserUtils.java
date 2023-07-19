@@ -281,7 +281,7 @@ public class BrowserUtils {
      * @param element
      * @throws AssertionError if the element is not found or not displayed
      */
-    public static void verifyElementDisplayed(WebElement element) {
+    public static void verifyElementDisplayed( WebElement element){
         try {
             Assert.assertTrue("Element not visible: " + element, element.isDisplayed());
         } catch (NoSuchElementException e) {
