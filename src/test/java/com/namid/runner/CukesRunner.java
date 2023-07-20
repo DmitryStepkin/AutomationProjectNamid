@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
             features = "src/test/resources/features",
             glue = "com/namid/step_definition",
             dryRun = false,
-            tags = "@DmitryS",
+            tags = "@B29G30-218",
             publish = true // generating a report with public link
 
 
