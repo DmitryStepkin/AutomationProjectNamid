@@ -9,12 +9,12 @@ import java.util.List;
 
 public class DashboardPagePOS_Mng {
 
-    public DashboardPagePOS_Mng(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public DashboardPagePOS_Mng() {
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
-    @FindBy (xpath = "//a[@data-menu='484']")
+    @FindBy(xpath = "//a[@data-menu='484']")
     public WebElement pointOfSale;
 
     @FindBy (xpath = "//nav[@class='navbar navbar-inverse']")

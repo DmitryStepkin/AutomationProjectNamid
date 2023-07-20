@@ -40,6 +40,9 @@ public class CalendarPage {
     @FindBy(xpath = "//div[@class='o_group']")
     public WebElement eventDetails;
 
+    @FindBy(xpath = "//span[normalize-space()='Delete']")
+    public WebElement deleteBtn;
+
 
 
 
