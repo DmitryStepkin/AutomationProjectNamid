@@ -3,6 +3,7 @@ package com.namid.step_definition;
 import com.namid.pages.DashboardPage;
 import com.namid.pages.LoginPage;
 import com.namid.pages.PosPage;
+import com.namid.pages.SalesPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,6 +20,8 @@ public class US07_Joceline_StepDefs {
     DashboardPage dashboardPage = new DashboardPage();
 
     PosPage posPage = new PosPage();
+
+    SalesPage salesPage = new SalesPage();
     @Given("user on pos manager home page")
     public void user_on_pos_manager_home_page()  {
         loginPage.loginAsPostManager();
@@ -45,6 +48,34 @@ public class US07_Joceline_StepDefs {
         }
 
 
+    }
+
+    @Given("user on Sales manager home page")
+    public void userOnSalesManagerHomePage() {
+        loginPage.loginAsSalesManager();
+    }
+
+    @When("user on the home page they see Sales manager display name")
+    public void userOnTheHomePageTheySeeSalesManagerDisplayName() {
+        String expectedTitle ="SalesManager10";
+        String actualTitle = salesPage.SalesManagerDisplayName.getText();
+
+        Assert.assertEquals(expectedTitle,actualTitle);
+    }
+
+    @When("user click on Sales module")
+    public void userClickOnSalesModule() {
+        salesPage.Sales.click();
+    }
+
+    @Then("user able to see six columns on the Sales page")
+    public void userAbleToSeeSixColumnsOnTheSalesPage(List<String>expectedColumns) {
+
+        List<String>actualColumns = new ArrayList<>();
+
+        for(WebElement eachColumns : salesPage.Columns) {
+            actualColumns.add(eachColumns.getText());
+        }
     }
 }
 
