@@ -20,4 +20,26 @@ public class DashboardPagePOS_Mng {
     @FindBy (xpath = "//nav[@class='navbar navbar-inverse']")
     public List<WebElement> allModules;
 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @FindBy(xpath = "(//span[ contains(text(),'Inventory')])[1]")
+    public WebElement inventoryBtn;
+
+    @FindBy(xpath = "//a[@data-menu='378']/span")
+    public WebElement productBtn;
+
 }
