@@ -63,5 +63,8 @@ public class US04_Suraye_StepDefs {
     }
 
 
-
+    @And("User should delete the event by clicking delete button")
+    public void userShouldDeleteTheEventByClickingDeleteButton() {
+        calendarPage.deleteBtn.click();
+    }
 }

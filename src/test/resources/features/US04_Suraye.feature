@@ -18,3 +18,4 @@ Feature: Calendar Event Creation
     When User on the Calendar module
     And User click on the created event on the calendar
     Then User should be able to see the event details
+    And User should delete the event by clicking delete button
