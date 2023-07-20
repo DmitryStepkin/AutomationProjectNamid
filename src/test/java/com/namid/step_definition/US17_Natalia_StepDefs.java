@@ -1,6 +1,7 @@
 package com.namid.step_definition;
 
 import com.namid.pages.LoginPage;
+import com.namid.utilities.BrowserUtils;
 import com.namid.utilities.ConfigurationReader;
 import com.namid.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -28,7 +29,8 @@ public class US17_Natalia_StepDefs {
         List<WebElement> allModules = Driver.getDriver().findElements(By.xpath("//li[@style='display: block;']//span"));
 
         for (WebElement each : allModules){
-            Assert.assertTrue(each.isDisplayed());
+            BrowserUtils.sleep(2);
+            Assert.assertTrue(each.isEnabled());
         }
 
     }

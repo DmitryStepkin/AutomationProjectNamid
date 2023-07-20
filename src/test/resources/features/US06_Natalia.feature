@@ -28,6 +28,10 @@ Feature: US06 As a PosManager, I should be able to add new products to inventory
     Given User logged in as PosManager
     When User goes to "Inventory" module
     And User click Products button
-    And User click on "product"
+    And User click on product
     And User click Edit button
-    Then User should be able to edit all the boxes
+    Then User should be able to change the Name of the product field
+    Then User should be able to edit check boxes
+    Then User should be able to edit Product Type dropdown
+    Then User should be able to edit Internal Reference and Barcode
+    Then User should be able to edit Sales Price and Cost fields
