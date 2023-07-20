@@ -30,11 +30,21 @@ public class US02_Nina_StepDefs {
     public void user_click_on_log_in_button() {
          loginPage.loginBtn.click();
     }
+
     @Then("User should see his {string} on dashboard")
     public void user_should_see_his_on_dashboard(String expectedUserName) {
         String actualUserName = dashboardPage.userName.getText();
 
         Assert.assertEquals( expectedUserName, actualUserName);
     }
+
+    @Then("User should see his {string} on a login page")
+    public void user_should_see_his_on_a_login_page(String expectedErrorMsg) {
+
+        String actualErrorMsg = loginPage.invalidCredentialsMessage.getText();
+
+        Assert.assertEquals(expectedErrorMsg, actualErrorMsg);
+    }
+
 
 }
