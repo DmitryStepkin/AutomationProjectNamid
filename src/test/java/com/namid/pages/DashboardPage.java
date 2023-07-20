@@ -28,4 +28,7 @@ public class DashboardPage {
     @FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
     public WebElement repairs;
 
+    @FindBy(xpath = "//span[normalize-space()='Calendar']")
+    public WebElement calendarLink;
+
 }
