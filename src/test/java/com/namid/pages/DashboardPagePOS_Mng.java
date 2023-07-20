@@ -30,6 +30,7 @@ public class DashboardPagePOS_Mng {
 
 
 
+
     @FindBy(xpath = "(//span[ contains(text(),'Inventory')])[1]")
     public WebElement inventoryBtn;
 
