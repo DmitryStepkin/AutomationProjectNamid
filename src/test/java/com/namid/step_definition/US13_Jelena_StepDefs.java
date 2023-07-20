@@ -30,6 +30,9 @@ public class US13_Jelena_StepDefs {
         for (WebElement each : dashboardPagePOS_mng.allModules){
             actualMod.add(each.getText());
         }
-        Assert.assertEquals(expectedMod,actualMod);
+        System.out.println("actualMod = " + actualMod);
+        System.out.println("expectedMod = " + expectedMod);
+        Assert.assertEquals(actualMod, expectedMod);
+
     }
 }
