@@ -8,14 +8,10 @@ import com.namid.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 
-import java.util.Map;
 
 public class US03_Suraye_StepDefs {
 
-    WebDriver driver;
     LoginPage loginPage=new LoginPage();
     DashboardPage dashboardPage=new DashboardPage();
 
@@ -46,7 +42,7 @@ public class US03_Suraye_StepDefs {
     @When("User navigates to the calendar page")
     public void user_navigates_to_the_calendar_page() {
 
-    calendarPage.calendarLink.click();
+    dashboardPage.calendarLink.click();
 
     }
 
