@@ -104,21 +104,26 @@ public class US06_Natalia_StepDefs {
     }
     @Then("User should be able to edit all the boxes")
     public void user_should_be_able_to_edit_all_the_boxes() {
-    WebElement productName = Driver.getDriver().findElement(By.id("o_field_input_1316"));
-    WebElement canBeSold = Driver.getDriver().findElement(By.id("o_field_input_1317"));
-    WebElement canBePurchase = Driver.getDriver().findElement(By.id("o_field_input_1318"));
-    WebElement canBeExpensed = Driver.getDriver().findElement(By.id("o_field_input_1319"));
-    WebElement productTypeDropdown = Driver.getDriver().findElement(By.id("o_field_input_1321"));
+        WebElement productName = Driver.getDriver().findElement(By.xpath("//input[@placeholder='Product Name']"));
+        productName.sendKeys("Changes Made");
+        WebElement canBeSold = Driver.getDriver().findElement(By.xpath("//div[@name='sale_ok']/input"));
+        canBeSold.click();
+        WebElement canBePurchase = Driver.getDriver().findElement(By.xpath("//div[@name='purchase_ok']/input"));
+        canBePurchase.click();
+        WebElement canBeExpensed = Driver.getDriver().findElement(By.xpath("//div[@name='can_be_expensed']/input"));
+        canBeExpensed.click();
+
+    WebElement productTypeDropdown = Driver.getDriver().findElement(By.xpath("//select[@name='type']"));
         Select select = new Select(productTypeDropdown);
         select.selectByIndex(2);
                 //WebElement categoryList = Driver.getDriver().findElement(By.id("o_field_input_1322"));
-    WebElement internalReference = Driver.getDriver().findElement(By.id("o_field_input_1323"));
+    WebElement internalReference = Driver.getDriver().findElement(By.xpath("//input[@name='default_code']"));
     internalReference.sendKeys("change 1");
-    WebElement barcode = Driver.getDriver().findElement(By.id("o_field_input_1324"));
+    WebElement barcode = Driver.getDriver().findElement(By.xpath("//input[@name='barcode']"));
     barcode.sendKeys("change 1");
-    WebElement salesPrice = Driver.getDriver().findElement(By.id("o_field_input_1325"));
+    WebElement salesPrice = Driver.getDriver().findElement(By.xpath("//div[@name='list_price']//input"));
     salesPrice.sendKeys("200.55");
-    WebElement cost = Driver.getDriver().findElement(By.id("o_field_input_1329"));
+    WebElement cost = Driver.getDriver().findElement(By.xpath("//div[@name='standard_price']//input"));
     cost.sendKeys("200.55");
     WebElement saveButton = Driver.getDriver().findElement(By.xpath("//button[@accesskey='s']"));
 
