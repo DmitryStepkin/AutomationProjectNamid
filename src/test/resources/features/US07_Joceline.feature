@@ -14,7 +14,6 @@ Feature: As a POS & sales manager, I should be able to get correct information o
       | Total            |
       | Status           |
 
-@wip
 
   Scenario: Verify there are 6 columns to see the quotations on the Sales page when the POS & sales managers login.
 
@@ -29,3 +28,23 @@ Feature: As a POS & sales manager, I should be able to get correct information o
       | Salesperson      |
       | Total            |
       | Status           |
+
+
+  Scenario: Verify user can see the result on the list when searching with Quotation Number data.
+
+    Given user on pos manager home page
+    When user click on sales module
+    When pos manager search by Quotation Number data in the search box
+    And select first option
+
+    Then pos manager see the result on the list
+
+
+  @joceline
+  Scenario: Verify user can see the result on the list when searching with Quotation Number data.
+
+    Given user on Sales manager home page
+    When user click on Sales module
+    When Sales manager search by Quotation Number data in the search box
+    And select first option
+    Then Sales manager see the result on the list

@@ -4,12 +4,22 @@ import com.namid.pages.DashboardPage;
 import com.namid.pages.LoginPage;
 import com.namid.pages.PosPage;
 import com.namid.pages.SalesPage;
+import com.namid.utilities.BrowserUtils;
+import com.namid.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.bytebuddy.asm.Advice;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,6 +63,7 @@ public class US07_Joceline_StepDefs {
     @Given("user on Sales manager home page")
     public void userOnSalesManagerHomePage() {
         loginPage.loginAsSalesManager();
+
     }
 
     @When("user on the home page they see Sales manager display name")
@@ -77,7 +88,58 @@ public class US07_Joceline_StepDefs {
             actualColumns.add(eachColumns.getText());
         }
     }
+
+
+    @And("select first option")
+    public void selectFirstOption() {
+        WebElement FirstOption = Driver.getDriver().findElement(By.xpath("//li[@class='o-selection-focus']"));
+        SalesPage.FirstOption.click();
+
+
+    }
+
+    @When("pos manager search by Quotation Number data in the search box")
+    public void posManagerSearchByQuotationNumberDataInTheSearchBox() {
+        SalesPage.SearchBox.sendKeys("SO811"+Keys.ENTER);
+        BrowserUtils.sleep(2);
+
+
+    }
+
+    @Then("pos manager see the result on the list")
+    public void posManagerSeeTheResultOnTheList(List<String>expectedListOfResult) {
+WebElement ListOfResult =Driver.getDriver().findElement(By.xpath("//tr[@class='o_data_row']"));
+
+       // List<String>actualListOfResult=new ArrayList<>();
+       // for (WebElement eachListOfResult : salesPage.ListOfResult){
+         //   actualListOfResult.add(eachListOfResult.getText());
+      //  }
+
+    }
+
+    @When("Sales manager search by Quotation Number data in the search box")
+    public void salesManagerSearchByQuotationNumberDataInTheSearchBox() {
+        SalesPage.SearchBox.sendKeys("SO811"+Keys.ENTER);
+        BrowserUtils.sleep(2);
+
+    }
+
+
+
+
+
+
+
+
+    @Then("Sales manager see the result on the list")
+    public void salesManagerSeeTheResultOnTheList() {
+        WebElement ListOfResult =Driver.getDriver().findElement(By.xpath("//tr[@class='o_data_row']"));
+    }
 }
+
+
+
+
 
 
 
