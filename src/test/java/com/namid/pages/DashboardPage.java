@@ -31,4 +31,7 @@ public class DashboardPage {
     @FindBy(xpath = "//span[normalize-space()='Calendar']")
     public WebElement calendarLink;
 
+    @FindBy(xpath = "//a[@data-menu='347']")
+    public WebElement inventoryModule;
+
 }
