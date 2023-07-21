@@ -1,4 +1,4 @@
-@DmitryS
+
 Feature: US06 As a PosManager, I should be able to add new products to inventory.
 
   Scenario: AC-1 TC-1. The user can create a new product by filling only the Product Name input box and after clicking the save button,

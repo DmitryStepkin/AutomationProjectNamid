@@ -48,8 +48,8 @@ public class SalesPage {
     @FindBy(xpath = "//ul[@style='display: none;']")
     public WebElement SearchBoxDropdown;
 
-    @FindBy(xpath = "//li[@class='o-selection-focus']")
-    public static WebElement FirstOption;
+    @FindBy(xpath = "(//tr[@class='o_data_row']//td)[2]")
+    public static WebElement quotationNumberName;
     @FindBy(xpath = "//tr[@class='o_data_row']")
     public List <WebElement> ListOfResult;
 

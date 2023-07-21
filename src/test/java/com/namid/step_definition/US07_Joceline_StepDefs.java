@@ -90,50 +90,35 @@ public class US07_Joceline_StepDefs {
     }
 
 
-    @And("select first option")
-    public void selectFirstOption() {
-        WebElement FirstOption = Driver.getDriver().findElement(By.xpath("//li[@class='o-selection-focus']"));
-        SalesPage.FirstOption.click();
 
 
-    }
+    @When("pos manager search by {string} Quotation Number data in the search box")
+    public void posManagerSearchByQuotationNumberDataInTheSearchBox(String name) {
 
-    @When("pos manager search by Quotation Number data in the search box")
-    public void posManagerSearchByQuotationNumberDataInTheSearchBox() {
-        SalesPage.SearchBox.sendKeys("SO811"+Keys.ENTER);
-        BrowserUtils.sleep(2);
-
-
-    }
-
-    @Then("pos manager see the result on the list")
-    public void posManagerSeeTheResultOnTheList(List<String>expectedListOfResult) {
-WebElement ListOfResult =Driver.getDriver().findElement(By.xpath("//tr[@class='o_data_row']"));
-
-       // List<String>actualListOfResult=new ArrayList<>();
-       // for (WebElement eachListOfResult : salesPage.ListOfResult){
-         //   actualListOfResult.add(eachListOfResult.getText());
-      //  }
-
-    }
-
-    @When("Sales manager search by Quotation Number data in the search box")
-    public void salesManagerSearchByQuotationNumberDataInTheSearchBox() {
-        SalesPage.SearchBox.sendKeys("SO811"+Keys.ENTER);
-        BrowserUtils.sleep(2);
+        SalesPage.SearchBox.click();
+        SalesPage.SearchBox.sendKeys(name);
+        SalesPage.SearchBox.sendKeys(Keys.ENTER);
 
     }
 
 
 
+    @When("Sales manager search by {string} Quotation Number data in the search box")
+    public void salesManagerSearchByQuotationNumberDataInTheSearchBox(String name)  {
+        SalesPage.SearchBox.click();
+        SalesPage.SearchBox.sendKeys(name);
+        SalesPage.SearchBox.sendKeys(Keys.ENTER);
+        //BrowserUtils.sleep(2);
+
+    }
 
 
+    @Then("User see the {string} result on the list")
+    public void posManagerSeeTheResultOnTheList(String expectedResult) {
 
+        String actualResult = SalesPage.quotationNumberName.getText();
 
-
-    @Then("Sales manager see the result on the list")
-    public void salesManagerSeeTheResultOnTheList() {
-        WebElement ListOfResult =Driver.getDriver().findElement(By.xpath("//tr[@class='o_data_row']"));
+        Assert.assertEquals(expectedResult,actualResult);
     }
 }
 
