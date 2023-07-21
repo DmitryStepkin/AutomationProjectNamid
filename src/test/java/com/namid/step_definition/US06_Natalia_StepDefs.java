@@ -74,13 +74,19 @@ public class US06_Natalia_StepDefs {
     @And("User goes back to Products by clicking Products button and search {string}")
     public void userGoesBackToProductsByClickingProductsButtonAndSearch(String enteredName) {
         inventoryModulePage.productsButton.click();
-        WebElement searchBox = Driver.getDriver().findElement(By.xpath("//input[@class='o_searchview_input']"));
-        searchBox.sendKeys(enteredName + Keys.ENTER);
+        BrowserUtils.sleep(3);
+        WebElement searchBox = Driver.getDriver().findElement(By.xpath("//input[@placeholder='Search...']"));
+        // searchBox.click();
+        searchBox.sendKeys(enteredName);
+        BrowserUtils.sleep(3);
+
+        searchBox.sendKeys( Keys.ENTER);
 
     }
     @Then("The {string} of the customer which the user entered should be displayed")
     public void theOfTheCustomerWhichTheUserEnteredShouldBeDisplayed(String expectedToBeDisplayed) {
-    WebElement displayedElement = Driver.getDriver().findElement(By.xpath("//strong[@class='o_kanban_record_title'][1]/span[.="+expectedToBeDisplayed+"]"));
+        String locator="//strong[@class='o_kanban_record_title'][1]/span[.='"+expectedToBeDisplayed+"']";
+    WebElement displayedElement = Driver.getDriver().findElement(By.xpath(locator));
 
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(displayedElement));
