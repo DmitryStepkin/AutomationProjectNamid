@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US_16_Piri_StepDefinition {
+public class US16_Piri_StepDefinition {
 
     LoginPage loginPage =new LoginPage();
     DashBoardExpensesPage dashBoardExpensesPage = new DashBoardExpensesPage();
