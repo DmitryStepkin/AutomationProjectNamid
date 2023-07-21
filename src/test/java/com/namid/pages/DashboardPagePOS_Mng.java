@@ -20,7 +20,11 @@ public class DashboardPagePOS_Mng {
     @FindBy (xpath = "//nav[@class='navbar navbar-inverse']")
     public List<WebElement> allModules;
 
- 
+    @FindBy(xpath = "//span[@class='oe_topbar_name']")
+    public WebElement userName;
+
+    @FindBy(xpath = "//a[.='Documentation']")
+    public WebElement documentationBtn;
 
 
 
