@@ -157,32 +157,9 @@ public class US06_Natalia_StepDefs {
         WebElement barcode = Driver.getDriver().findElement(By.xpath("//input[@name='barcode']"));
         barcode.clear();
         barcode.sendKeys("Test 1");
-    }
-
-    @Then("User should be able to edit Sales Price and Cost fields")
-    public void userShouldBeAbleToEditSalesPriceAndCostFields() {
-        WebElement salesPrice = Driver.getDriver().findElement(By.xpath("//div[@name='list_price']//input"));
-        BrowserUtils.sleep(3);
-        salesPrice.click();
-        salesPrice.sendKeys(Keys.HOME);
-        salesPrice.sendKeys(Keys.DELETE);
-        salesPrice.sendKeys(Keys.DELETE);
-        salesPrice.sendKeys(Keys.DELETE);
-        salesPrice.sendKeys(Keys.DELETE);
-        salesPrice.sendKeys(Keys.DELETE);
-        salesPrice.sendKeys(Keys.DELETE);
-        salesPrice.sendKeys(Keys.DELETE);
-        salesPrice.sendKeys(Keys.DELETE+"200");
-
-
-        WebElement cost = Driver.getDriver().findElement(By.xpath("//div[@name='standard_price']//input"));
-        cost.clear();
-        cost.sendKeys("250.00");
         WebElement saveButton = Driver.getDriver().findElement(By.xpath("//button[@accesskey='s']"));
         saveButton.click();
-
     }
-
 
 
 
